@@ -1,32 +1,62 @@
-# Nom de l'exécutable final
-EXEC = lib_ft
+# Nom de la bibliothèque
+NAME = libft.a
+
+# Compilateur et options
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror -MMD
 
 # Liste des fichiers sources
-SRC = main.c fonction1.c fonction2.c
+SRC = ft_strlen.c \
+      ft_isprint.c \
+      ft_isdigit.c \
+      ft_isalnum.c \
+      ft_isalpha.c \
+      ft_isascii.c \
+      ft_memcpy.c \
+      ft_memmove.c \
+      ft_memset.c \
+      ft_strlcat.c \
+      ft_strlcpy.c \
+      ft_tolower.c \
+      ft_toupper.c \
+      ft_strchr.c \
+      ft_memchr.c \
+      ft_strncmp.c \
+      ft_memchr.c \
+      ft_memcmp.c \
+      ft_strnstr.c \
+      ft_atoi.c \
+      ft_calloc.c \
+      ft_strdup.c
 
-# Fichiers objets correspondants
+# Fichiers objets et fichiers de dépendances
 OBJ = $(SRC:.c=.o)
+DEPS = $(OBJ:.o=.d)
 
-# Fichiers header
-DEPS = libft.h
+# Règle pour construire la bibliothèque
+all: $(NAME)
 
-# Options de compilation (par exemple, utiliser -Wall pour les avertissements)
-CFLAGS = -Wall -Wextra -g
+$(NAME): $(OBJ)
+	@ar rcs $(NAME) $(OBJ)
+	@echo "Library $(NAME) created!"
 
-# Compilateur utilisé
-CC = gcc
-
-# Règle principale : compiler les fichiers objets et générer l'exécutable
-$(EXEC): $(OBJ)
-	$(CC) -o $@ $^
-
-# Règle pour compiler les fichiers .c en .o en incluant les dépendances
-%.o: %.c $(DEPS)
+# Règle pour compiler les fichiers .c en fichiers .o et générer les fichiers .d
+%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# Nettoyer les fichiers objets et l'exécutable généré
-clean:
-	rm -f $(OBJ) $(EXEC)
+# Inclure les fichiers de dépendances générés automatiquement
+-include $(DEPS)
 
-# Cible pour relancer la compilation complète
-rebuild: clean $(EXEC)
+# Règle pour nettoyer les fichiers objets, de dépendance, et la bibliothèque
+clean:
+	@rm -f $(OBJ) $(DEPS)
+	@echo "Object files and dependencies removed!"
+
+fclean: clean
+	@rm -f $(NAME)
+	@echo "Library $(NAME) removed!"
+
+# Règle pour tout recompiler
+re: fclean all
+
+.PHONY: all clean fclean re

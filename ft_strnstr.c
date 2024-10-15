@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include<bsd/string.h>
 #include<stdlib.h>
 
 char *ft_strnstr(const char *big, const char *little, size_t len)
@@ -33,15 +32,4 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
 		i++;
 	}
 	return (0);
-}
-
-int main()
-{
-    char *s = "abcdef";
-    char *s2 = "cde";
-    
-    printf("mine %s\n", ft_strnstr(s,s2,3));
-    printf("nat %s\n", strnstr(s,s2,3));
-
-    return 0;
 }
