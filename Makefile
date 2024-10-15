@@ -1,5 +1,5 @@
 # Nom de l'exécutable final
-EXEC = mon_programme
+EXEC = lib_ft
 
 # Liste des fichiers sources
 SRC = main.c fonction1.c fonction2.c
