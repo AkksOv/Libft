@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 16:34:54 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/15 11:34:52 by jepenoy          ###   ########.fr       */
+/*   Created: 2024/10/15 13:07:02 by jepenoy           #+#    #+#             */
+/*   Updated: 2024/10/15 13:19:18 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
-
-size_t ft_strlen(const char *s)
+char *ft_strchr(const char *s, int c)
 {
-	unsigned int i = 0;
-	
-	while(s[i])
-		i++;
-	return i;
+    char *res;
+    res = (char*) s;
+	while(s)
+	{
+		if (*res == c)
+			return (res);
+		res++;
+	}
+	return (0);
 }

@@ -6,11 +6,13 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:44:27 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/14 17:25:41 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/15 11:35:08 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *ft_memset(void *s, int c, unsigned int n)
+#include<stdlib.h>
+
+void *ft_memset(void *s, int c, size_t n)
 {
     unsigned char *p;
 	

@@ -1,22 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 16:34:54 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/15 11:34:52 by jepenoy          ###   ########.fr       */
+/*   Created: 2024/10/15 11:49:24 by jepenoy           #+#    #+#             */
+/*   Updated: 2024/10/15 11:51:34 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
-
-size_t ft_strlen(const char *s)
+int ft_toupper(int c)
 {
-	unsigned int i = 0;
-	
-	while(s[i])
-		i++;
-	return i;
+	if(c >= 'a' && c <= 'z')
+		return (c - 32);
 }
