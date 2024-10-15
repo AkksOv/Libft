@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 13:37:54 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/15 14:52:01 by jepenoy          ###   ########.fr       */
+/*   Created: 2024/10/15 14:50:11 by jepenoy           #+#    #+#             */
+/*   Updated: 2024/10/15 15:03:48 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdlib.h>
 
-int	ft_strncmp(char *s1, char *s2, size_t n)
+int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
+	unsigned char *t1; 
+	unsigned char *t2;
+	int i;
 
-	if (n == 0)
-		return (0);
-	i = 0;
-	while (s1[i] && i < n - 1)
+    i = 0;
+	t1 = (unsigned char*) s1;
+	t2 = (unsigned char*) s2;
+
+	while(t1[i] == t2[i] && n)
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-		i++;
+		n--;
+	    i++;
 	}
-	return (s1[i] - s2[i]);
+	return (t1[i] - t2[i]);
 }

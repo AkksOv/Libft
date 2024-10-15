@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/15 13:37:54 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/15 14:52:01 by jepenoy          ###   ########.fr       */
+/*   Created: 2024/10/15 16:31:29 by jepenoy           #+#    #+#             */
+/*   Updated: 2024/10/15 16:44:26 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdlib.h>
 
-int	ft_strncmp(char *s1, char *s2, size_t n)
+void *ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	i;
-
-	if (n == 0)
-		return (0);
-	i = 0;
-	while (s1[i] && i < n - 1)
-	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-		i++;
-	}
-	return (s1[i] - s2[i]);
+	if(nmemb == 0 || size == 0)
+		return 0;
+	return(malloc(nmemb * size));
 }
