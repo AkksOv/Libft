@@ -8,7 +8,7 @@ SRC = main.c fonction1.c fonction2.c
 OBJ = $(SRC:.c=.o)
 
 # Fichiers header
-DEPS = fonctions.h
+DEPS = libft.h
 
 # Options de compilation (par exemple, utiliser -Wall pour les avertissements)
 CFLAGS = -Wall -Wextra -g
