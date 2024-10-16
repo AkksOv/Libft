@@ -33,7 +33,7 @@ char	*ft_itoa(int n)
 
 	size = count_signs(n);
 	res = malloc(sizeof(char) * size);
-	if (res = NULL)
+	if (res == NULL)
 		return (0);
 	res[size] = '\0';
 	while (--size >= 0)

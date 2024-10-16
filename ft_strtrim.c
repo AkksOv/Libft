@@ -12,7 +12,7 @@
 
 #include <stdlib.h>
 
-static	int	is_include(char c, char *set)
+static	int	is_include(char c,const char *set)
 {
 	int	i;
 

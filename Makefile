@@ -28,14 +28,17 @@ SRC = ft_strlen.c \
       ft_atoi.c \
       ft_calloc.c \
       ft_strdup.c \
-	  ft_putchar_fd.c \
-	  ft_putstr_fd.c \
-	  ft_putendl_fd \
-	  ft_putnbr_fd \
-	  ft_itoa.c \
-	  ft_substr \
-	  ft_strtrim \
-
+	ft_putchar_fd.c \
+	ft_putstr_fd.c \
+      ft_putendl_fd.c \
+	ft_putnbr_fd.c \
+	ft_itoa.c \
+	ft_substr.c \
+	ft_strtrim.c \
+      ft_striteri.c \
+      ft_strmapi.c \
+      ft_strjoin.c \
+      ft_split.c \
 
 OBJ = $(SRC:.c=.o)
 DEPS = $(OBJ:.o=.d)
@@ -61,6 +64,6 @@ fclean: clean
 	@rm -f $(NAME)
 	@echo "Library $(NAME) removed!"
 
-.PHONY: clean
-clean:
-  rm -rf *.o
+re: fclean all
+
+.PHONY: all clean fclean re
