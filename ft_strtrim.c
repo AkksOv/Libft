@@ -20,7 +20,7 @@ static	int	is_include(char c,const char *set)
 	while (set[i])
 	{
 		if (set[i] == c)
-			return (i);
+			return (1);
 		i++;
 	}
 	return (0);
