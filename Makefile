@@ -40,6 +40,9 @@ SRC = ft_strlen.c \
       ft_strjoin.c \
       ft_split.c \
 
+BONUS_SRC = ft_lstnew.c \
+            ft_lstadd_front.c
+
 OBJ = $(SRC:.c=.o)
 DEPS = $(OBJ:.o=.d)
 
@@ -49,6 +52,8 @@ $(NAME): $(OBJ)
 	@ar rcs $(NAME) $(OBJ)
 	@echo "Library $(NAME) created!"
 
+bonus: $(OBJ) $(BONUS_OBJ)
+    ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
