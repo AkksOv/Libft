@@ -3,7 +3,7 @@ NAME = libft.a
 
 # Compilateur et options
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -MMD
+CFLAGS = -Wall -Wextra -Werror
 
 # Liste des fichiers sources
 SRC = ft_strlen.c \
@@ -29,25 +29,22 @@ SRC = ft_strlen.c \
       ft_calloc.c \
       ft_strdup.c
 
-# Fichiers objets et fichiers de dépendances
 OBJ = $(SRC:.c=.o)
 DEPS = $(OBJ:.o=.d)
 
-# Règle pour construire la bibliothèque
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	@ar rcs $(NAME) $(OBJ)
 	@echo "Library $(NAME) created!"
 
-# Règle pour compiler les fichiers .c en fichiers .o et générer les fichiers .d
+
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# Inclure les fichiers de dépendances générés automatiquement
+
 -include $(DEPS)
 
-# Règle pour nettoyer les fichiers objets, de dépendance, et la bibliothèque
 clean:
 	@rm -f $(OBJ) $(DEPS)
 	@echo "Object files and dependencies removed!"
@@ -55,8 +52,3 @@ clean:
 fclean: clean
 	@rm -f $(NAME)
 	@echo "Library $(NAME) removed!"
-
-# Règle pour tout recompiler
-re: fclean all
-
-.PHONY: all clean fclean re
