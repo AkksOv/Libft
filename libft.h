@@ -6,7 +6,7 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 14:58:12 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/16 16:10:28 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/16 17:26:33 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ char *ft_strtrim(char const *s1, char const *set);
 void ft_striteri(char *s, void (*f)(unsigned int, char*));
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char *ft_strjoin(char const *s1, char const *s2);
+char **ft_split(char const *s, char c);
 
 
 #endif
