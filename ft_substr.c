@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 16:34:54 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/16 14:22:40 by jepenoy          ###   ########.fr       */
+/*   Created: 2024/10/16 13:47:18 by jepenoy           #+#    #+#             */
+/*   Updated: 2024/10/16 14:07:53 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdlib.h>
 
-size_t	ft_strlen(const char *s)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned int i = 0;
+	char	*res;
+	int		j;
 
-	while (s[i])
-		i++;
-	return (i);
+	j = 0;
+	res = malloc(sizeof(char) * (len + 1));
+	if (res == NULL)
+		return (0);
+	while (j <= len)
+		res[j++] = s[start++];
+	res[j] = '\0';
+	return (res);
 }

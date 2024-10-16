@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 16:34:54 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/16 14:22:40 by jepenoy          ###   ########.fr       */
+/*   Created: 2024/10/16 15:24:22 by jepenoy           #+#    #+#             */
+/*   Updated: 2024/10/16 16:08:59 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
+#include <stdlib.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int i = 0;
+	char	*res;
+	int		size;
+	int		i;
 
+	i = 0;
+	size = ft_strlen(s);
+	res = malloc(sizeof(char) * (size +1));
+	if (res == NULL)
+		return (0);
 	while (s[i])
-		i++;
-	return (i);
+		res[i++] = f(i, s[i]);
+	res[i] = '\0';
+	return (res);
 }

@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/16 14:58:12 by jepenoy           #+#    #+#             */
+/*   Updated: 2024/10/16 16:10:28 by jepenoy          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 #define LIBFT_H
 
-#include <stddef.h>  
+#include <stddef.h> 
 
 size_t ft_strlen(const char *s);
 int ft_isprint(int c);
@@ -28,5 +40,13 @@ char *ft_strdup(const char *s);
 void ft_putchar_fd(char c, int fd);
 void ft_putstr_fd(char *s, int fd);
 void ft_putendl_fd(char *s, int fd);
+void ft_putnbr_fd(int n, int fd);
+char *ft_itoa(int n);
+char *ft_substr(char const *s, unsigned int start, size_t len);
+char *ft_strtrim(char const *s1, char const *set);
+void ft_striteri(char *s, void (*f)(unsigned int, char*));
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char *ft_strjoin(char const *s1, char const *s2);
+
 
 #endif

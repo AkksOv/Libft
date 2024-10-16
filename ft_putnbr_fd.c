@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 16:34:54 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/16 14:22:40 by jepenoy          ###   ########.fr       */
+/*   Created: 2024/10/16 13:01:23 by jepenoy           #+#    #+#             */
+/*   Updated: 2024/10/16 13:15:58 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
+#include"libft.h"
 
-size_t	ft_strlen(const char *s)
+void ft_putnbr_fd(int n, int fd)
 {
-	unsigned int i = 0;
-
-	while (s[i])
-		i++;
-	return (i);
+    if (n == -2147483648)
+	{
+	    ft_putstr_fd("-2147483648", fd);
+	    return;
+	}
+	if (n < 0)
+	{
+		n *= -1;
+		ft_putchar_fd('-', fd);
+	}	
+	if(n > 10)
+	    ft_putnbr_fd(n/10, fd);
+	ft_putchar_fd(n%10 + '0', fd);
 }
