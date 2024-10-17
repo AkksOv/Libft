@@ -6,7 +6,7 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 14:58:12 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/16 17:26:33 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/17 10:39:19 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,7 @@ void ft_lstadd_front(t_list **lst, t_list *new);
 t_list *ft_lstlast(t_list *lst);
 int ft_lstsize(t_list *lst);
 void ft_lstadd_back(t_list **lst, t_list *new);
+void ft_lstdelone(t_list *lst, void (*del)(void*));
+void ft_lstclear(t_list **lst, void (*del)(void*));
 
 #endif
