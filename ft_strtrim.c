@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 static	int	is_include(char c,const char *set)
 {
@@ -26,30 +27,42 @@ static	int	is_include(char c,const char *set)
 	return (0);
 }
 
+static int count_char(char const *s, char const *set)
+{
+	int i;
+	int j;
+
+	j = (int)ft_strlen(s);
+	i = 0;
+	while (s[i] && is_include(s[i], set))
+		i++;
+	while (is_include(s[j-1], set) && (j - 1) > i)
+		j--;
+	return (i + j);
+}
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
 	int		j;
+	int     k;
 	int		count;
 	char	*res;
 
 	i = 0;
-	while (s1[i])
-	{
-		if (!(is_include(s1[i],set)))
-			count++;
-		i++;
-	}
+	k = 0;
+	count = count_char(s1,set);
 	res = malloc(sizeof(char) * (count + 1));
 	if (res == NULL)
 		return (0);
-	i = -1;
-	j = 0;
-	while (++i, s1[i])
-	{
-		if (!(is_include(s1[i],set)))
-			res[j++] = s1[i];
-	}
-	res[j] = '\0';
+	j = (int)ft_strlen(s1);
+	while (s1[i] && is_include(s1[i],set))
+			i++;
+	while (s1[j] && is_include(s1[j],set))
+			j--;
+	
+	while(i <= j)
+	    res[k++] = s1[i++]; 
+	res[k] = '\0';
 	return (res);
 }
