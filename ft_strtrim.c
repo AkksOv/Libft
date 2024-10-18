@@ -38,7 +38,7 @@ static int count_char(char const *s, char const *set)
 		i++;
 	while (is_include(s[j-1], set) && (j - 1) > i)
 		j--;
-	return (i + j);
+	return (j - i);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -49,19 +49,18 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		count;
 	char	*res;
 
+    if (!s1)
+        return NULL;
 	i = 0;
 	k = 0;
 	count = count_char(s1,set);
 	res = malloc(sizeof(char) * (count + 1));
 	if (res == NULL)
 		return (0);
-	j = (int)ft_strlen(s1);
 	while (s1[i] && is_include(s1[i],set))
 			i++;
-	while (s1[j] && is_include(s1[j],set))
-			j--;
-	
-	while(i <= j)
+	j = i + count;
+	while(i < j)
 	    res[k++] = s1[i++]; 
 	res[k] = '\0';
 	return (res);
