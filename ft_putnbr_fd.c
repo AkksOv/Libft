@@ -6,7 +6,7 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 13:01:23 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/16 13:15:58 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/18 11:45:54 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void ft_putnbr_fd(int n, int fd)
 		n *= -1;
 		ft_putchar_fd('-', fd);
 	}	
-	if(n > 10)
+	if(n >= 10)
 	    ft_putnbr_fd(n/10, fd);
 	ft_putchar_fd(n%10 + '0', fd);
 }

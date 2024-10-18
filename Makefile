@@ -9,6 +9,7 @@ CFLAGS = -Wall -Wextra -Werror
 SRC = ft_strlen.c \
       ft_isprint.c \
       ft_isdigit.c \
+	  ft_bzero.c \
       ft_isalnum.c \
       ft_isalpha.c \
       ft_isascii.c \
@@ -20,6 +21,7 @@ SRC = ft_strlen.c \
       ft_tolower.c \
       ft_toupper.c \
       ft_strchr.c \
+	  ft_strrchr.c \
       ft_memchr.c \
       ft_strncmp.c \
       ft_memcmp.c \
@@ -47,8 +49,8 @@ BONUS_SRC = ft_lstnew.c \
 			ft_lstadd_back.c \
 			ft_lstdelone.c \
 			ft_lstclear.c \
-                  ft_lstiter.c \
-                  ft_lstmap.c
+            ft_lstiter.c \
+            ft_lstmap.c
 
 # Objets pour les fichiers réguliers et bonus
 OBJ = $(SRC:.c=.o)

@@ -6,13 +6,15 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:51:10 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/15 11:51:49 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/18 11:30:05 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include<stdio.h>
 
 int ft_tolower(int c)
 {
 	if(c >= 'A' && c <= 'Z')
 		return (c + 32);
-	return (0);
+	return (c);
 }
