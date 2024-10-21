@@ -6,18 +6,18 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 12:54:43 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/18 10:39:30 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/21 17:48:54 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
-void ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	int i;
 
 	i = 0;
-	while(s[i])
-		ft_putchar_fd(s[i++],fd);
+	while (s[i])
+		ft_putchar_fd(s[i++], fd);
 	ft_putchar_fd('\n', fd);
 }

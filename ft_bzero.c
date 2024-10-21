@@ -6,15 +6,16 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:36:48 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/15 11:36:57 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/21 11:10:26 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
+#include <stdlib.h>
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    unsigned char *ptr = s;
-    while (n--)
-        *ptr++ = 0;
+	unsigned char	*ptr = s;
+
+	while (n--)
+		*ptr++ = 0;
 }

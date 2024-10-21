@@ -6,41 +6,45 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:26:03 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/16 18:06:27 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/21 17:14:52 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
+#include <stdlib.h>
 
-static  char	*ft_strncpy(char *dest, const char *src, unsigned int n)
+static char	*ft_strncpy(char *dest, const char *src, unsigned int n)
 {
 	unsigned int	i;
 
 	i = 0;
 	while (i < n)
 	{
-		if (i > ft_strlen(src))
-			dest[i] = '\0';
-		else
-			dest[i] = src[i];
+		dest[i] = src[i];
 		i++;
 	}
 	dest[i] = '\0';
 	return (dest);
 }
 
-static int count_words(const char *s, char c)
+static int	count_words(const char *s, char c)
 {
-	int i;
-	int res;
+	int	i;
+	int	res;
 
+	if (c == '\0')
+		return (1);
 	res = 0;
-	i = -1;
-	while (++i, s[i])
+	i = 0;
+	while (s[i] == c)
+		i++;
+	while (s[i])
 	{
-		if (s[i] == c)
-			res++;
+		while (s[i] != c && s[i])
+			i++;
+		while (s[i] == c)
+			i++;
+		res++;
 	}
 	return (res);
 }
@@ -49,25 +53,24 @@ static char	*ft_set_strings(const char *str, int f, int l)
 {
 	char	*temp;
 
-	temp = malloc(sizeof(char) * (l - f + 1));
+	temp = malloc(sizeof(char) * ((l - f) + 2));
 	if (temp == NULL)
 		return (0);
-	return (ft_strncpy(temp, str + f, (l - f + 1)));
+	return (ft_strncpy(temp, str + f, (l - f) + 1));
 }
 
-
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char **res;
-	int count;
-	int i;
-	int start;
-	int end;
+	char	**res;
+	int		count;
+	int		i;
+	int		start;
+	int		end;
 
-	res = malloc(sizeof(char *) * (ft_strlen(s) + count_words(s, c)));
+	end = 0;
+	res = malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (res == NULL)
 		return (0);
-
 	count = 0;
 	i = 0;
 	while (s[i])
@@ -77,7 +80,7 @@ char **ft_split(char const *s, char c)
 		start = i;
 		while (s[i] != c && s[i] != '\0')
 			end = i++;
-		if (start < end)
+		if (start <= end)
 			res[count++] = ft_set_strings(s, start, end);
 	}
 	res[count] = NULL;

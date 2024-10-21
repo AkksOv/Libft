@@ -6,14 +6,14 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:38:46 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/15 12:57:02 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/21 17:16:39 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
-#include"libft.h"
+#include "libft.h"
+#include <stdlib.h>
 
-size_t ft_strlcat(char *dest, char *src, size_t size)
+size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
 	size_t	dest_length;
 	size_t	src_length;

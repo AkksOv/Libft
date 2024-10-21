@@ -6,7 +6,7 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:39:30 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/17 11:21:13 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/21 17:56:17 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,12 @@
 void ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list *temp;
-    if (!lst || !del)
-        return;
-    while (*lst)
-    {
-        temp = (*lst)->next;
-        del((*lst)->content);
-        free(*lst);
-        *lst = temp;
-    }
+	while (lst)
+	{
+		temp = *lst;
+		del(temp->content);
+		free(lst);
+		*lst = temp->next;
+	}
+	
 }

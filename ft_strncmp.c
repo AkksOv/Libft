@@ -6,11 +6,11 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 13:37:54 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/15 14:52:01 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/21 17:18:31 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
+#include <stdlib.h>
 
 int	ft_strncmp(char *s1, char *s2, size_t n)
 {
