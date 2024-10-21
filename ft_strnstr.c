@@ -6,7 +6,7 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:46:54 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/16 15:17:33 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/21 15:14:47 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
 	char	*res;
 
 	res = (char *) big;
+	if (little == NULL || little[0] == '\0')
+		return (res);
 	i = 0;
 	while (big[i] && i < len)
 	{

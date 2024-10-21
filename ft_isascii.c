@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jepenoy <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:32:38 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/14 16:33:08 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/21 11:28:53 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-	if(c >= 0 && c <= 127)
-		return 1;
-	return 0;
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }
