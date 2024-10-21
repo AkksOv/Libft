@@ -6,19 +6,14 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:26:03 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/21 16:49:58 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/21 17:14:52 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
+#include <stdlib.h>
 
-
-#include<stdio.h>
-
-
-
-static  char	*ft_strncpy(char *dest, const char *src, unsigned int n)
+static char	*ft_strncpy(char *dest, const char *src, unsigned int n)
 {
 	unsigned int	i;
 
@@ -32,10 +27,10 @@ static  char	*ft_strncpy(char *dest, const char *src, unsigned int n)
 	return (dest);
 }
 
-static int count_words(const char *s, char c)
+static int	count_words(const char *s, char c)
 {
-	int i;
-	int res;
+	int	i;
+	int	res;
 
 	if (c == '\0')
 		return (1);
@@ -64,26 +59,25 @@ static char	*ft_set_strings(const char *str, int f, int l)
 	return (ft_strncpy(temp, str + f, (l - f) + 1));
 }
 
-
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	char **res;
-	int count;
-	int i;
-	int start;
-	int end;
+	char	**res;
+	int		count;
+	int		i;
+	int		start;
+	int		end;
 
 	end = 0;
 	res = malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (res == NULL)
 		return (0);
-
 	count = 0;
 	i = 0;
 	while (s[i])
 	{
 		while (s[i] == c && s[i] != '\0')
-			start = i++;
+			i++;
+		start = i;
 		while (s[i] != c && s[i] != '\0')
 			end = i++;
 		if (start <= end)

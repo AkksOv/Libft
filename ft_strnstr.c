@@ -6,14 +6,13 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:46:54 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/21 15:14:47 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/21 17:18:49 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include<stdlib.h>
+#include <stdlib.h>
 
-char *ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
@@ -28,7 +27,7 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
 		j = 0;
 		while (big[i+j] == little[j]&& (i + j) < len)
 		{
-			if (little[j+1] == '\0')
+			if (little[j + 1] == '\0')
 				return (res + i);
 			j++;
 		}

@@ -6,14 +6,14 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 16:46:05 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/15 16:47:54 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/21 17:15:14 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
-#include"libft.h"
+#include "libft.h"
+#include <stdlib.h>
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	char	*str;
 	int		i;

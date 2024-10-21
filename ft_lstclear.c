@@ -6,7 +6,7 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 10:39:30 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/17 11:21:13 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/21 17:56:17 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,4 @@ void ft_lstclear(t_list **lst, void (*del)(void*))
 		free(lst);
 		*lst = temp->next;
 	}
-	
 }

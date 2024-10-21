@@ -6,11 +6,11 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:34:54 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/16 14:22:40 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/21 17:18:20 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
+#include <stdlib.h>
 
 size_t	ft_strlen(const char *s)
 {

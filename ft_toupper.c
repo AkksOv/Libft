@@ -6,13 +6,13 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:49:24 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/18 11:30:17 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/21 17:43:13 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-	if(c >= 'a' && c <= 'z')
+	if (c >= 'a' && c <= 'z')
 		return (c - 32);
 	return (c);
 }
