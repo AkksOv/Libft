@@ -59,6 +59,16 @@ static char	*ft_set_strings(const char *str, int f, int l)
 	return (ft_strncpy(temp, str + f, (l - f) + 1));
 }
 
+static char	*free_allocated_memory(char **res, int count)
+{
+    for (int i = 0; i < count; i++)
+    {
+        free(res[i]);
+    }
+    free(res);
+	return (0);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**res;
@@ -82,6 +92,8 @@ char	**ft_split(char const *s, char c)
 			end = i++;
 		if (start <= end)
 			res[count++] = ft_set_strings(s, start, end);
+		if (res[count - 1] == NULL)
+			return free_allocated_memory(res, count - 1);
 	}
 	res[count] = NULL;
 	return (res);
