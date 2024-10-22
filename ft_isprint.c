@@ -6,14 +6,13 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:33:16 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/21 11:33:04 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/22 13:42:17 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-	if(c >= 32 && c <= 126)
-		return 1;
-	return 0;
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }
-

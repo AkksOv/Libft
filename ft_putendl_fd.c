@@ -6,7 +6,7 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 12:54:43 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/21 17:48:54 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/22 12:44:50 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i])

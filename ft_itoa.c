@@ -6,11 +6,11 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 13:24:46 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/16 13:52:40 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/22 13:40:33 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
+#include <stdlib.h>
 
 static int	count_signs(long int n)
 {
@@ -18,7 +18,7 @@ static int	count_signs(long int n)
 
 	i = 0;
 	if (n == 0)
-		return 1;
+		return (1);
 	if (n < 0)
 	{
 		i = 1;
@@ -34,9 +34,9 @@ static int	count_signs(long int n)
 
 char	*ft_itoa(int n)
 {
-	int		size;
-	char	*res;
-	long int nb;
+	int			size;
+	char		*res;
+	long int	nb;
 
 	nb = (long int) n;
 	size = count_signs(nb);
@@ -45,7 +45,7 @@ char	*ft_itoa(int n)
 		return (0);
 	res[size] = '\0';
 	if (nb == 0)
-	    res[0] = '0';
+		res[0] = '0';
 	if (nb < 0)
 	{
 		nb *= -1;

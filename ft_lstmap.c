@@ -6,7 +6,7 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 13:46:44 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/21 13:47:02 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/22 13:39:16 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,10 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *new_list = NULL;
-	t_list *new_elem;
+	t_list	*new_list;
+	t_list	*new_elem;
 
+	new_list = NULL;
 	while (lst)
 	{
 		new_elem = ft_lstnew(f(lst->content));

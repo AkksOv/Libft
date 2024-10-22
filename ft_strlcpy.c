@@ -6,12 +6,12 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:32:57 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/15 11:34:06 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/22 13:35:02 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
-#include"libft.h"
+#include <stdlib.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dest, char *src, size_t size)
 {

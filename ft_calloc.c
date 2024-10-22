@@ -6,7 +6,7 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 16:31:29 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/21 11:11:28 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/22 13:41:25 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	total_size = nmemb * size;
 	if (nmemb != 0 && total_size / nmemb != size)
-		return (NULL); 
+		return (NULL);
 	ptr = malloc(total_size);
 	if (!ptr)
 		return (NULL);

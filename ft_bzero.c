@@ -6,7 +6,7 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:36:48 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/21 11:10:26 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/22 12:33:01 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*ptr = s;
+	unsigned char	*ptr;
 
+	ptr = s;
 	while (n--)
 		*ptr++ = 0;
 }
