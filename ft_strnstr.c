@@ -6,7 +6,7 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 15:46:54 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/21 17:18:49 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/22 13:36:15 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	char	*res;
 
 	res = (char *) big;
-	if (little == NULL || little[0] == '\0')
+	if (little[0] == '\0')
 		return (res);
 	i = 0;
 	while (big[i] && i < len)
 	{
 		j = 0;
-		while (big[i+j] == little[j]&& (i + j) < len)
+		while (big[i + j] == little[j] && (i + j) < len)
 		{
 			if (little[j + 1] == '\0')
 				return (res + i);

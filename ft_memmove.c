@@ -6,7 +6,7 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:35:28 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/21 17:50:23 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/22 13:39:01 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;
-
 	if (d == s || n == 0)
 		return (dest);
-
 	if (d < s)
 	{
 		while (n--)

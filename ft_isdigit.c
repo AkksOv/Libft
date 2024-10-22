@@ -6,13 +6,13 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:31:18 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/16 13:20:46 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/22 12:33:50 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-	if(c >= '0' && c <= '9')
-		return 1;
-	return 0;
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }

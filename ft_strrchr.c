@@ -6,7 +6,7 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 13:20:40 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/21 14:54:59 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/22 13:42:04 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ char	*ft_strrchr(const char *s, int c)
 	d = (char *)s;
 	if (tc == 0)
 		return (d + ft_strlen(s));
-
 	i = 0;
 	temp = -1;
 	while (d[i])
