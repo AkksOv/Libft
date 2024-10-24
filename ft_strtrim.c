@@ -49,7 +49,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		count;
 	char	*res;
 
-	if (s1 == NULL)
+	if (s1 == NULL || set == NULL)
 		return (NULL);
 	i = 0;
 	k = 0;

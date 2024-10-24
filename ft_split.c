@@ -67,26 +67,14 @@ static char	**free_allocated_memory(char **res, int count)
 	return (0);
 }
 
-char	**ft_return(char **res, int count)
+static char	**ft_maker(char **res, char const *s, int count, char const c)
 {
-	res[count] = NULL;
-	return (res);
-}
-
-char	**ft_split(char const *s, char c)
-{
-	char	**res;
-	int		count;
 	int		i;
 	int		start;
 	int		end;
 
-	res = malloc(sizeof(char *) * (count_words(s, c) + 1));
-	if (res == NULL)
-		return (0);
 	i = 0;
 	end = 0;
-	count = 0;
 	while (s[i])
 	{
 		while (s[i] == c && s[i] != '\0')
@@ -96,8 +84,22 @@ char	**ft_split(char const *s, char c)
 			end = i++;
 		if (start <= end)
 			res[count++] = ft_set_strings(s, start, end);
-		if (res[count - 1] == NULL)
+		if (count > 0 && res[count - 1] == NULL)
 			return (free_allocated_memory(res, count - 1));
 	}
-	return (ft_return(res, count));
+	res[count] = NULL;
+	return (res);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**res;
+	int		count;
+
+	if (!s)
+		return (0);
+	res = malloc(sizeof(char *) * (count_words(s, c) + 1));
+	if (res == NULL)
+		return (0);
+	return (ft_maker(res, s, count, c));
 }
