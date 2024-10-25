@@ -6,7 +6,7 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 11:38:46 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/21 17:16:39 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/25 10:57:46 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 
 	dest_length = 0;
 	src_length = ft_strlen(src);
+	if (!dest && size == 0)
+		return (src_length);
 	i = 0;
 	while (dest[i] != '\0' && i < size)
 		i++;

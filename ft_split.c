@@ -6,7 +6,7 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 17:26:03 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/23 14:42:53 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/25 09:44:55 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,7 @@ char	**ft_split(char const *s, char c)
 	char	**res;
 	int		count;
 
+	count = 0;
 	if (!s)
 		return (0);
 	res = malloc(sizeof(char *) * (count_words(s, c) + 1));

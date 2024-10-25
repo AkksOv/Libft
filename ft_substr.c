@@ -6,12 +6,23 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 13:47:18 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/22 13:38:07 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/25 11:00:57 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+
+static char	*allocempty(void)
+{
+	char	*res;
+
+	res = malloc(sizeof(char) * 1);
+	if (res == NULL)
+		return (0);
+	res[0] = '\0';
+	return (res);
+}
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -23,13 +34,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (len > (ft_strlen(s) - start))
 		len = ft_strlen(s) - start;
 	if (start >= ft_strlen(s))
-	{
-		res = malloc(sizeof(char) * 1);
-		if (res == NULL)
-			return (0);
-		res[0] = '\0';
-		return (res);
-	}
+		return (allocempty());
 	j = 0;
 	res = malloc(sizeof(char) * (len + 1));
 	if (res == NULL)

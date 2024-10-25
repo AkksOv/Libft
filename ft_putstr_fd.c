@@ -6,7 +6,7 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 11:45:04 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/22 13:38:42 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/25 10:10:50 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
-	if(!s)
-		return;
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 		ft_putchar_fd(s[i++], fd);
