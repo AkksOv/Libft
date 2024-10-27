@@ -6,7 +6,7 @@
 /*   By: jepenoy <jepenoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 14:11:15 by jepenoy           #+#    #+#             */
-/*   Updated: 2024/10/21 17:30:02 by jepenoy          ###   ########.fr       */
+/*   Updated: 2024/10/25 17:08:06 by jepenoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		count;
 	char	*res;
 
-	if (s1 == NULL || set == NULL)
+	if (!s1 || !set)
 		return (NULL);
 	i = 0;
 	k = 0;
